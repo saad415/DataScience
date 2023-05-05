@@ -42,5 +42,5 @@ df_out = df.drop(['Unnamed: 0'], axis =1 )
 
 
 
-#df_out.to_csv('Cleaned_Internet_Users.csv', index=False)
+df_out.to_csv('Cleaned_Internet_Users.csv', index=False)
 
