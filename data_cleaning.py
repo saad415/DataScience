@@ -12,7 +12,7 @@ df = pd.read_csv('Internet_Usres.csv')
 print("Column datatypes: ")
 print(df.dtypes)
 
-#df['Entity'].nunique()
+#No_of_countries = df['Entity'].nunique()
 
 #print(df['Entity'].value_counts())
 
@@ -22,7 +22,9 @@ print(df.dtypes)
 
 df.drop(df[df['Internet Users(%)'] < 1].index, inplace=True)
 
-df.describe()
+a = df.describe()
+
+#maximum_internet = df[df['Internet Users(%)'] == 100]
 
 #df = df[(df.Year == 2012) | (df.Year == 2013) ]
 
@@ -38,5 +40,7 @@ df.sort_values(['Entity', 'Year'], ascending=[True, True], inplace=True)
 
 df_out = df.drop(['Unnamed: 0'], axis =1 )
 
-df_out.to_csv('Cleaned_Internet_Users.csv', index=False)
+
+
+#df_out.to_csv('Cleaned_Internet_Users.csv', index=False)
 
