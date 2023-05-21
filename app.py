@@ -31,7 +31,10 @@ def ValuePredictor(to_predict_list):
 @app.route('/', methods=['POST', 'GET'])
 def result():
     if request.method == 'POST':
+        #year = request.json
         to_predict_list = request.form.to_dict()
+        #print(year['year'])
+        print(to_predict_list)
         to_predict_list = list(to_predict_list.values())
         to_predict_list = list(map(float, to_predict_list))
         result = round(float(ValuePredictor(to_predict_list)), 2)
